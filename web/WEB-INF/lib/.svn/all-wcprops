@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/jason/!svn/ver/165/onjankers/server/web/WEB-INF/lib
+END
+java_websocket.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/java_websocket.jar
+END
+neutrino-server.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/jason/!svn/ver/165/onjankers/server/web/WEB-INF/lib/neutrino-server.jar
+END
+jackson-mapper-lgpl-1.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/jackson-mapper-lgpl-1.5.5.jar
+END
+commons-fileupload-1.2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/commons-fileupload-1.2.2.jar
+END
+servlet-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/servlet-api.jar
+END
+jackson-core-lgpl-1.5.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/jackson-core-lgpl-1.5.5.jar
+END
+activation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/activation.jar
+END
+mail.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/mail.jar
+END
+neutrino-server-premium.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/jason/!svn/ver/117/onjankers/server/web/WEB-INF/lib/neutrino-server-premium.jar
+END

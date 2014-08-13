@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/jason/!svn/ver/117/onjankers/server/app/db
+END
+fixtures-base.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/jason/!svn/ver/117/onjankers/server/app/db/fixtures-base.sql
+END
+fixtures-users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/jason/!svn/ver/117/onjankers/server/app/db/fixtures-users.sql
+END
+schema-base.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/app/db/schema-base.sql
+END
+schema-users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/jason/!svn/ver/117/onjankers/server/app/db/schema-users.sql
+END
+schema.sql
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/jason/!svn/ver/117/onjankers/server/app/db/schema.sql
+END

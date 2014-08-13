@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf
+END
+logging.properties
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf/logging.properties
+END
+context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf/context.xml
+END
+server.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf/server.xml
+END
+tomcat-users.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf/tomcat-users.xml
+END
+catalina.properties
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf/catalina.properties
+END
+catalina.policy
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf/catalina.policy
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/conf/web.xml
+END

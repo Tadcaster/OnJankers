@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib
+END
+annotations-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/annotations-api.jar
+END
+ecj-3.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/ecj-3.6.jar
+END
+mysql-connector-java-5.1.14-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/mysql-connector-java-5.1.14-bin.jar
+END
+el-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/el-api.jar
+END
+tomcat-i18n-es.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/tomcat-i18n-es.jar
+END
+tomcat-i18n-fr.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/tomcat-i18n-fr.jar
+END
+catalina.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/catalina.jar
+END
+jasper-el.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/jasper-el.jar
+END
+jasper.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/jasper.jar
+END
+tomcat-coyote.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/tomcat-coyote.jar
+END
+servlet-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/servlet-api.jar
+END
+catalina-ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/catalina-ant.jar
+END
+tomcat-i18n-ja.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/tomcat-i18n-ja.jar
+END
+tomcat-dbcp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/tomcat-dbcp.jar
+END
+tomcat-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/tomcat-api.jar
+END
+catalina-tribes.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/catalina-tribes.jar
+END
+catalina-ha.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/catalina-ha.jar
+END
+tomcat-util.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/tomcat-util.jar
+END
+jsp-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/lib/jsp-api.jar
+END

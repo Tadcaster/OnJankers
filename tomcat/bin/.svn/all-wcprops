@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin
+END
+tomcat-native.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/tomcat-native.tar.gz
+END
+shutdown.bat
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/shutdown.bat
+END
+catalina.bat
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/catalina.bat
+END
+shutdown.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/shutdown.sh
+END
+digest.bat
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/digest.bat
+END
+catalina.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/catalina.sh
+END
+commons-daemon.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/commons-daemon.jar
+END
+digest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/digest.sh
+END
+bootstrap.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/bootstrap.jar
+END
+version.bat
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/version.bat
+END
+catalina-tasks.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/catalina-tasks.xml
+END
+version.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/version.sh
+END
+cpappend.bat
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/cpappend.bat
+END
+tool-wrapper.bat
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/tool-wrapper.bat
+END
+setclasspath.bat
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/setclasspath.bat
+END
+tomcat-juli.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/tomcat-juli.jar
+END
+commons-daemon-native.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/commons-daemon-native.tar.gz
+END
+tool-wrapper.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/tool-wrapper.sh
+END
+startup.bat
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/startup.bat
+END
+setclasspath.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/setclasspath.sh
+END
+startup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/startup.sh
+END
+configtest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/jason/!svn/ver/117/onjankers/server/tomcat/bin/configtest.sh
+END
