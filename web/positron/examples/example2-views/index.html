@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Positron Example 2: Views</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+
+</head>
+
+<body
+	pos-app="Positron Example 2: Views"
+	>
+	<div pos-view="square:hc" class="pos-invisible"></div>
+
+  <div pos-action="showview: square">
+    Click here to show the square view.
+  </div>
+  <div pos-action="hideview: square">
+    Click here to hide the square view.
+  </div>
+  <div pos-action="toggleview: square">
+    Click here to toggle the visibility of the square view.
+  </div>
+  <div pos-action="refreshview: square">
+    Click here to refresh the square view (should clear the blue-bg class).
+  </div>
+  <div pos-action="addclass: blue-bg/.square">
+    Click here to add the blue-bg class to the square.
+  </div>
+  <div pos-action="removeclass: blue-bg/.square">
+    Click here to remove the blue-bg class from the square.
+  </div>
+  <div pos-action="toggleclass: blue-bg/.square">
+    Click here to toggle the blue-bg class on the square.
+  </div>
+</body>
+
+</html>

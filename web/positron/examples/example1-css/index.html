@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Positron Example 1: CSS</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<style>
+
+.square
+{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.blue-bg
+{
+  background-color: blue;
+}
+
+</style>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+
+</head>
+
+<body
+	pos-app="Positron Example 1: CSS"
+	>
+  <div class="square"></div>
+  <div pos-action="addclass: blue-bg/.square">
+    Click here to add the blue-bg class to the square.
+  </div>
+  <div pos-action="removeclass: blue-bg/.square">
+    Click here to remove the blue-bg class from the square.
+  </div>
+  <div pos-action="toggleclass: blue-bg/.square">
+    Click here to toggle the blue-bg class on the square.
+  </div>
+  <div
+  	pos-action-1="addclass: blue-bg/.square"
+  	pos-action-2="removeclass: blue-bg/.square"
+  	>
+    Click here to add and remove blue-bg class (ie do nothing).
+  </div>
+</body>
+
+</html>

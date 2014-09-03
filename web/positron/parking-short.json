@@ -1,0 +1,267 @@
+{  
+  "ParkingDestinations":
+  [  
+    {  
+      "DestinationID":"a7b5142f-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"9 Morris St",
+      "Latitude":"32.790305",
+      "Longitude":"-79.940035",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateHighest":"90.0",
+      "RateLowest":"90.0",
+      "CurrencySymbol":"USD"
+    },
+    {  
+      "DestinationID":"a7b9e63c-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"540 King St",
+      "Latitude":"32.792059",
+      "Longitude":"-79.94024",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateHighest":"90.0",
+      "RateLowest":"90.0",
+      "CurrencySymbol":"USD"
+    },
+    {  
+      "DestinationID":"a7bcbdfb-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"2 Gillon St",
+      "Latitude":"32.777012",
+      "Longitude":"-79.926113",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateHighest":"175.0",
+      "RateLowest":"175.0",
+      "CurrencySymbol":"USD"
+    },
+    {  
+      "DestinationID":"a7bf7ae6-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"19 Elliott St",
+      "Latitude":"32.776031",
+      "Longitude":"-79.928136",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateHighest":"200.0",
+      "RateLowest":"200.0",
+      "CurrencySymbol":"USD"
+    },
+    {  
+      "DestinationID":"a7c1d2bb-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"29 Elliott St",
+      "Latitude":"32.775938",
+      "Longitude":"-79.928765",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateHighest":"200.0",
+      "RateLowest":"200.0",
+      "CurrencySymbol":"USD"
+    },
+    {  
+      "DestinationID":"a7c4163b-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"44 Morris St",
+      "Latitude":"32.789503",
+      "Longitude":"-79.942592",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateHighest":"90.0",
+      "RateLowest":"90.0",
+      "CurrencySymbol":"USD"
+    },
+    {  
+      "DestinationID":"a7c6e986-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"471-723 Biscayne Blvd",
+      "Latitude":"25.7710972",
+      "Longitude":"-80.187207",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7c923d5-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"28 NE 11th Terrace",
+      "Latitude":"25.785201",
+      "Longitude":"-80.193377",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7cbfd59-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"400 Biscayne Blvd",
+      "Latitude":"25.771476",
+      "Longitude":"-80.186146",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7d111d7-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"200 Biscayne Blvd",
+      "Latitude":"25.776774",
+      "Longitude":"-80.187805",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":[  
+        {  
+          "PaymentMethod":"Coins"
+        },
+        {  
+          "PaymentMethod":"Debit"
+        },
+        {  
+          "PaymentMethod":"Visa"
+        },
+        {  
+          "PaymentMethod":"Mastercard"
+        }
+      ],
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7d34d89-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"170 NE 2nd St",
+      "Latitude":"25.776465",
+      "Longitude":"-80.190477",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7d627d8-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"2-98 NW 8th St",
+      "Latitude":"25.781827",
+      "Longitude":"-80.194875",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7db3c63-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"NE 3rd Ave",
+      "Latitude":"25.776987",
+      "Longitude":"-80.199435",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7dd76a8-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"50 Biscayne Blvd",
+      "Latitude":"25.774967",
+      "Longitude":"-80.188256",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7e051e0-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"50 S Biscayne Blvd",
+      "Latitude":"25.774136",
+      "Longitude":"-80.187569",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7e28b45-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"200 SW 1st St",
+      "Latitude":"25.773199",
+      "Longitude":"-80.196882",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"a7e5671f-f978-1030-b78d-b2113e0355a2",
+      "DestinationName":"1050 MacArthur Causeway",
+      "Latitude":"25.783199",
+      "Longitude":"-80.176937",
+      "TimeZone":"Z-05:00",
+      "PaymentMethodsAccepted":{  
+
+      },
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"2a1213d4-1485-1031-b152-5a27b4144625",
+      "DestinationName":"19th Avenue Ramp",
+      "Latitude":"44.970541",
+      "Longitude":"-93.246075",
+      "TimeZone":"Z-06:00",
+      "SpaceCapacityTotal":521,
+      "PaymentMethodsAccepted":[  
+        {  
+          "PaymentMethod":"Bills"
+        },
+        {  
+          "PaymentMethod":"Visa"
+        },
+        {  
+          "PaymentMethod":"Mastercard"
+        },
+        {  
+          "PaymentMethod":"Discover"
+        },
+        {  
+          "PaymentMethod":"Amex"
+        }
+      ],
+      "RateDescription":"No valid rate information available"
+    },
+    {  
+      "DestinationID":"8a843bc2-1486-1031-b152-5a27b4144625",
+      "DestinationName":"West Bank Office Building Ramp",
+      "Latitude":"44.976288",
+      "Longitude":"-93.248582",
+      "TimeZone":"Z-06:00",
+      "SpaceCapacityTotal":459,
+      "PaymentMethodsAccepted":[  
+        {  
+          "PaymentMethod":"Bills"
+        },
+        {  
+          "PaymentMethod":"Visa"
+        },
+        {  
+          "PaymentMethod":"Mastercard"
+        },
+        {  
+          "PaymentMethod":"Discover"
+        },
+        {  
+          "PaymentMethod":"Amex"
+        }
+      ],
+      "RateDescription":"No valid rate information available"
+    }
+  ]
+}

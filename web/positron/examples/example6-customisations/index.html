@@ -1,0 +1,60 @@
+<title>Positron Example 6: Customisations</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+<!-- <script src="application.js" type="text/javascript"></script> -->
+
+</head>
+
+<body>
+	<div pos-action="(click) alert: hello">Click here for an alert, using a custom action.</div>
+
+	<app-distance
+		lat1="37.47"
+		lon1="-122.25"
+		lat2="40.30"
+		lon2="-71.51"
+		name="distance"
+		>
+		<pos-numberformat
+			number="$distance.mi;"
+			type="fixed"
+			digits="2"
+			name="miles"
+			>
+			<pos-numberformat
+				number="$distance.km;"
+				type="fixed"
+				digits="2"
+				name="km"
+				>
+				<div>The distance between SF and NYC is $miles; miles ($km; km)
+					calculated by a custom tag.</div>
+			</pos-numberformat>
+		</pos-numberformat>
+	</app-distance>
+
+	<div pos-action="(delay: 3s) showview: delayed">
+		Here is the now part, and 3 seconds later...
+	</div>
+	
+	<div pos-view="delayed:" class="pos-invisible">
+	...here comes the delayed part, via a custom action trigger.
+	</div>
+	
+	<!-- the squawk attribute sets the contents of #squawk -->
+	<div squawk="something here">
+	</div>
+
+	<div id="squawk">
+	</div>
+</body>
+
+</html>

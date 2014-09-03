@@ -50,8 +50,24 @@ document.addEventListener ("DOMContentLoaded", main, false);
 <div class="header">	
 		<h1>Parking Data Test</h1> 	
 </div>
+    
+                    <pos-json url="parking-short.json">
+                        <pos-list key="json.ParkingDestinations" name="destination">
+                            
+                            <div class="list-item">$destination.DestinationID;</div>
+                            <div class="list-item">$destination.DestinationID;</div>
+                            <div class="list-item">$destination.DestinationID;</div>
+                            <div class="list-item">$destination.DestinationID;</div>
+                            <div class="list-item">$destination.DestinationID;</div>
+                            <div class="list-item">$destination.DestinationID;</div>
+							
+                            
+                        </pos-list>
+                    </pos-json>
 
-<div class="container">
+
+
+<!-- <div class="container">
 	
 	<div nu-view="parking_data" nu-dynamic="true">
 		<nu:json url="https://api.streetline.com/parkerdata/v1/ParkingDestinations.json?Key=8C1D4614E5C4D" prefix="json">
@@ -62,7 +78,8 @@ document.addEventListener ("DOMContentLoaded", main, false);
 					<div><h1>$json.meta.size;</h1></div>
 				</div>
                 
-				<div class="feed">
+ 
+                    <div class="feed">
 					<div class="title"><h3>Results</h3></div>
 					<div class="json-list">			
 						<nu:list key="json.data" prefix="json">
@@ -74,12 +91,26 @@ document.addEventListener ("DOMContentLoaded", main, false);
 						</nu:list>
 					</div>
 				</div>
+
+                
+                    <pos-json url="parking-short.json">
+                    <pos-list key="json.ParkingDestinations" name="destination">
+                      inside here, "destination" is the current list entry
+                      and you'll get as many copies as you have list entries
+                      </pos-list>
+                 </pos-json>
+
+    so inside <pos-list> you can reference things like DestinationName.
+
+                
 			</nu:if>
 			<nu:ifnot lhs="$json.type;" rhs="list">
 				<div>error getting data from $application.serverhost;</div>
 			</nu:ifnot>
 		</nu:json>
 	</div>
+
+-->
 	
 <!--    <div nu-view="confirmation" class="posted nu-invisible">
 		<p>Congratulations on assigning new Jankers</p>

@@ -1,0 +1,140 @@
+<title>Positron Example 4: Dynamics</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div>STRINGS</div>
+
+	<div>replacing one foo with bar in foobar should give barbar, actually gives..
+		<pos-replace string="foobar" replace="foo" with="bar">$replace;</pos-replace>
+	</div>
+
+	<div>replacing one [a-z] with bar in foobar should give baroobar, actually gives..
+		<pos-replace string="foobar" replace="[a-z]" with="bar" regexp="true">$replace;</pos-replace>
+	</div>
+
+	<div>replacing all foo with bar in foobar should give barbar, actually gives..
+		<pos-replace string="foobar" replace="foo" with="bar" all="true">$replace;</pos-replace>
+	</div>
+
+	<div>replacing all [a-z] with bar in foobar should give barbarbarbarbarbar, actually gives..
+		<pos-replace string="foobar" replace="[a-z]" with="bar" regexp="true" all="true">$replace;</pos-replace>
+	</div>
+
+	<div>Splitting "the quick brown fox jumps over the lazy dog" gives...
+		<pos-split string="the quick brown fox jumps over the lazy dog">
+			<pos-list key="split" name="fox">
+				<div>element $fox.meta.index;: $fox;</div>
+			</pos-list>
+			<div>Recombining gives...
+				<pos-join key="split">"$join;"</pos-join>
+			</div>
+		</pos-split>
+	</div>
+
+	<div>CUSTOM TRIGGERS</div>
+	
+	<div pos-action="(doubleclick) showview: double">Double click to show the double view</div>
+	<div pos-view="double:" class="pos-invisible">This is the double view</div>
+
+	<div>ARITHMETIC</div>
+	
+	<div>1 + 2 / 3 via &lt;set expression=&quot;1 + 2 / 3&quot;&gt; is
+		<pos-set expression="1 + 2 / 3">$set;</pos-set>
+	</div>
+	
+	<div>DATES</div>
+	
+	<pos-date name="date">
+		<div>current date is $date.string;</div>
+	</pos-date>
+	
+	<div>
+		Today's full year, via calling a function off an object in context, is...
+		<pos-date>
+			$date.getFullYear;
+		</pos-date>
+	</div>
+
+	<div>
+		Today's day name, done with split as it's not a property of the date object, is...
+		<pos-date>
+			<pos-split string="$date.string;">
+				<pos-list key="split" limit="1">
+					$list;
+				</pos-list>
+			</pos-split>
+		</pos-date>
+	</div>
+	
+	<div>PARAMETERISED REFRESH</div>
+	<div
+		pos-action="refreshview: flavour" pos-action-params="flavour: beer;"
+		>
+		Click here to change the flavour below to "beer".
+	</div>
+
+	<div pos-view="flavour:" pos-view-params="flavour: wine;">
+		<div>flavour is $params.flavour;</div>
+	</div>
+	
+	<div>MAP TRAVERSAL</div>
+	  <pos-json
+	  	url="data/movies.json"
+	  	name="movies"
+	  	>
+	    <div>Received $movies.data.length; records in JSON feed</div>
+	    <pos-list key="movies.data" name="movie">
+	    	<pos-map key="movie">
+	    		<div>$map.key; = $map.value;</div>
+	    	</pos-map>
+	    </pos-list>
+	  </pos-json>
+	</div>
+	
+	<div>META CONTEXT</div>
+	<div>Output of this block should be Fred... and it's....
+		<pos-set name="bill" value="fred">
+			<pos-set name="name" value="bill">
+				<pos-get key="$name;" name="get">
+					<pos-capitalcase string="$get;" name="capital">
+						$capital;
+					</pos-capitalcase>
+				</pos-get>
+			</pos-set>
+		</pos-set>
+	</div>
+	
+	<div>JSON FEEDS</div>
+	<div pos-view="movies:" pos-progress-selector="#movies-progress">
+	  <pos-json
+	  	url="data/movies.json"
+	  	name="movies"
+	  	>
+	    <div>Received $movies.data.length; records in JSON feed</div>
+	    <pos-list key="movies.data" name="movie">
+	      <pos-if true="$movie.meta.index; == 0">
+	        <div>first movie title - $movie.title;</div>
+	      </pos-if>
+	      <pos-if true="$movie.meta.index; != 0">
+	        <div>movie title - $movie.title;</div>
+	      </pos-ifnot>
+	    </pos-list>
+	  </pos-json>
+	</div>
+	<div id="movies-progress" class="pos-invisible">LOADING</div>
+	<div pos-action="showview: movies">REFRESH MOVIES</div>
+</body>
+
+</html>
+

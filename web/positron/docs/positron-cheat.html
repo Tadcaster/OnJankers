@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<style>
+
+table
+{
+	width: 100%;
+	border: 1px solid black;
+}
+
+th
+{
+	border: 1px solid black;
+}
+
+td
+{
+	border: 1px solid black;
+	text-align: left;
+}
+
+.name
+{
+	width: 10%;
+}
+
+.alias
+{
+	width: 10%;
+}
+
+.what
+{
+	width: 40%;
+}
+
+.expression
+{
+	margin-left: 20px;
+}
+
+</style>
+
+</head>
+<body>
+	<h1>ACTIONS</h1>
+	<table>
+		<tr>
+			<th class="name">Action Name</th>
+			<th class="what">What does it do?</th>
+			<th>Arguments</th>
+			<th>Parameters</th>
+			<th>Outputs</th>
+		</tr>
+		<tr>
+			<td>addclass</td>
+			<td>Add a CSS class to the specified elements.</td>
+			<td>class name / (view) / (selector)</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>ajaxformaction</td>
+			<td>Validate the associated form, then submits the form's values in an Ajax request.</td>
+			<td>-</td>
+			<td>-</td>
+			<td>Dispatches "pos-ajaxformsuccess" event with JSON result on success, 
+				"pos-error" event with error message on failure.
+			</td>
+		</tr>			
+		<tr>
+			<td>call</td>
+			<td>Calls the specified method off the enclosing view, page, application, or as a global function.</td>
+			<td>method name</td>
+			<td>Passed to receiving view, page, etc prior to invocation.</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>dispatchform</td>
+			<td>Validate the form, then dispatches its contents in a "pos-formdispatch" event for further consumption by actions.
+				The eventlet attached to the "pos-formdispatch" event copies the form values into the associated action's parameter space.
+			</td>
+			<td>-</td>
+			<td>-</td>
+			<td>Dispatches "pos-formdispatch" event with form values as detail.</td>
+		</tr>			
+		<tr>
+			<td>gotourl</td>
+			<td>Copies the entire action argument string into document.location.href</td>
+			<td>destination URL</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>hideview</td>
+			<td>Hides the view with the specified key, with an optional transition-out animation.</td>
+			<td>view key / (transition out animation name)</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>indexedinsert</td>
+			<td>Insert record into specified database using the Indexed DB API.</td>
+			<td>database name / table name</td>
+			<td>contents of record</td>
+			<td>Dispatches "pos-indexedinsertsuccess" on success, "pos-error" on failure.</td>
+		</tr>			
+		<tr>
+			<td>refreshview</td>
+			<td>Refresh the view with the specified key, with an optional transition-in animation if the view is currently hidden.</td>
+			<td>view key / (transition in animation name)</td>
+			<td>Passed to view prior to refresh.</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>removeclass</td>
+			<td>Remove a CSS class from the specified elements.</td>
+			<td>class name / (view) / (selector)</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>runcontroller</td>
+			<td>Run the controller with the specified key.</td>
+			<td>controller key</td>
+			<td>Passed to controller.</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>setattribute</td>
+			<td>Set attributes on the specified elements.</td>
+			<td>(view) / (selector)</td>
+			<td>Attributes to set on specified element.</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>setlocalstorage</td>
+			<td>Set properties in the browser's local storage.</td>
+			<td>-</td>
+			<td>Property names & values.</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>setpage</td>
+			<td>Set the current page, transitioning out the current one, if any.</td>
+			<td>page key / (transition out animation name) / (transition in animation name)</td>
+			<td>Passed to new page.</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>setparams</td>
+			<td>Set parameters in specified view, page, etc.</td>
+			<td>view, page, or application / view key, page key</td>
+			<td>Passed to receiving entity.</td>
+			<td>-</td>
+		</tr>			
+		<tr>
+			<td>setstyle</td>
+			<td>Set CSS properties on specified elements.</td>
+			<td>class name / (view) / (selector)</td>
+			<td>CSS property names and values.</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>settransform</td>
+			<td>Set (unprefixed) CSS transform properties on specified elements.</td>
+			<td>class name / (view) / (selector)</td>
+			<td>Unprefixed transform names and values.</td>
+			<td>-</td>
+		</tr>			
+	</table>
+	
+	<h1>TAGS</h1>
+
+	<table>
+		<tr>
+			<th class="name">Tag Name</th>
+			<th class="alias">Aliases</th>
+			<th class="what">What does it do?</th>
+			<th>Attributes</th>
+			<th>Outputs</th>
+		</tr>
+		<tr>
+			<td>pos-action</td>
+			<td>-</td>
+			<td>Perform the specified list of actions immediately.</td>
+			<td>action, action-params</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pos-changecase</td>
+			<td>pos-uppercase<br/>pos-lowercase<br/>pos-capitalcase</td>
+			<td>Uppercase, lowercase, or initially capitalise a string.</td>
+			<td>string</td>
+			<td>
+				$uppercase; (for $lt;pos-uppercase&gt;)<br/>
+				$lowercase; (for $lt;pos-lowercase&gt;)<br/>
+				$capitalcase; (for $lt;pos-capitalcase&gt;)<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>pos-comment</td>
+			<td>-</td>
+			<td>Used for source commenting only, removed from output.</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pos-date</td>
+			<td>-</td>
+			<td>Put the date described by the ms (milliseconds) or string (Date.toString() format) attribute into context.</td>
+			<td>(ms) or (string)</td>
+			<td>
+				$date; - the resulting Date object<br/>
+				$date.year;<br/>
+				$date.month; - 1-based month number<br/>
+				$date.month0; - 0-based month number<br/>
+				$date.day;<br/>
+				$date.hours; - hours in 24 hour clock<br/>
+				$date.hours24; - hours in 24 hour clock<br/>
+				$date.hours12; - hours in 12 hour clock<br/>
+				$date.minutes;<br/>
+				$date.seconds;<br/>
+				$date.ms;<br/>
+				$date.string; - result of Date.toString()<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>pos-distance</td>
+			<td>-</td>
+			<td>Calculate the distance between two geo points.</td>
+			<td>
+				lat1<br/>
+				lon1<br/>
+				lat2<br/>
+				lon2<br/>
+			</td>
+			<td>
+				$distance.m; - distance in metres<br/>
+				$distance.km; - distance in kilometres<br/>
+				$distance.mi; - distance in miles<br/>
+				$distance.yards; - distance in yards<br/>
+				$distance.feet; - distance in feet<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>pos-get</td>
+			<td>-</td>
+			<td>Get a context entry with a key which can be dynamically generated.</td>
+			<td>key</td>
+			<td>$get; - resulting context entry</td>
+		</tr>
+		<tr>
+			<td>pos-if</td>
+			<td>-</td>
+			<td>Conditionally include child nodes depending on whether condition is satisfied.</td>
+			<td>
+				empty - if the attribute is empty<br/>
+				notempty - if the value of the attribute is empty<br/>
+				true - if the value of the expression contained within the attribute is true<br/>
+				false - if the value of the expression contained within the attribute is false<br/>
+				allowed expressions are -- <br/>
+				<span class="expression">== / equals</span><br/>
+				<span class="expression">!= / doesnotequal</span><br/>
+				<span class="expression">> / greaterthan</span><br/>
+				<span class="expression">>= / greaterthanorequal</span><br/>
+				<span class="expression">< / lessthan</span><br/>
+				<span class="expression"><= / lessthanorequal</span><br/>
+				<span class="expression">contains</span><br/>
+				<span class="expression">containsignorecase</span><br/>
+				<span class="expression">doesnotcontain</span><br/>
+				<span class="expression">doesnotcontainignorecase</span><br/>
+				expressions can be joined with logical operators -- <br/>
+				<span class="expression">&& / and</span><br/>
+				<span class="expression">|| / or</span><br/>
+			</td>
+			<td>Children are included if the condition is met.</td>
+		</tr>
+		<tr>
+			<td>pos-indexedquery</td>
+			<td>-</td>
+			<td>Query into a database using the Indexed Database API. Currently only fetches all records :-o</td>
+			<td>
+				database - database name<br/>
+				store - store (table) name<br/>
+			</td>
+			<td>$indexedquery; - list of records</td>
+		</tr>
+		<tr>
+			<td>pos-join</td>
+			<td>-</td>
+			<td>Join a list into a string, with configurable delimiter and "smartness".</td>
+			<td>
+				key - key of list in context<br/>
+				(delimiter) - delimiter string<br/>
+				(smart) - whether to omit empty or undefined elements<br/>
+			</td>
+			<td>$join; - resulting string</td>
+		</tr>
+		<tr>
+			<td>pos-json</td>
+			<td>-</td>
+			<td>Get a chunk of JSON from a URL and add the parsed object tree to context.</td>
+			<td>
+				url - URL<br/>
+				(method) - get/post, default is get<br/>
+				(cachekey) - key of cache entry to check for and set<br/>
+			</td>
+			<td>$json; - parsed object tree</td>
+		</tr>
+		<tr>
+			<td>pos-list</td>
+			<td>-</td>
+			<td>Iterate a list in context, providing a copy of its children per iteration.</td>
+			<td>
+				key - key of list in context<br/>
+				(offset) - start including list elements at this index<br/>
+				(limit) - at most, include this many elements<br/>
+				(searchkey) - if the list contains objects, search on this key<br/>
+				(searchvalue) - if this list contains objects, search on this value<br/>
+			</td>
+			<td>
+				$list; - the list element
+				$list.meta.globalindex; - index of this element into the full list<br/>
+				$list.meta.globalcount; - count of elements in full list<br/>
+				$list.meta.index; - index of this element in sub list<br/>
+				$list.meta.count; - count of elements in sub list<br/>
+				$list.meta.isfirst; - is this the first element in the sub list?<br/>
+				$list.meta.islast; - is this the last element in the sub list?<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>pos-localstorage</td>
+			<td>-</td>
+			<td>Get one or more properties from local storage and add to context.</td>
+			<td>
+				key - 
+				key-n - extra keys<br/>
+			</td>
+			<td>$localstorage.key; - properties</td>
+		</tr>
+		<tr>
+			<td>pos-location</td>
+			<td>-</td>
+			<td>Add the current location to context.</td>
+			<td>-</td>
+			<td>
+				$position.coords.accuracy;<br/>
+				$position.coords.altitude;<br/>
+				$position.coords.latitude;<br/>
+				$position.coords.longitude;<br/>
+				$position.timestamp;<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>pos-log</td>
+			<td>-</td>
+			<td>Log the specified values to the console.</td>
+			<td>
+				(value) - a direct value<br/>
+				(valuekey) - key into context<br/>
+			</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pos-map</td>
+			<td>-</td>
+			<td>Iterate a map in context, providing a copy of its children per iteration.</td>
+			<td>
+				key - key of list in context<br/>
+				(offset) - start including list elements at this index<br/>
+				(limit) - at most, include this many elements<br/>
+				(searchkey) - if the list contains objects, search on this key<br/>
+				(searchvalue) - if this list contains objects, search on this value<br/>
+			</td>
+			<td>
+				$list; - the list element<br/>
+				$list.meta.globalindex; - index of this element into the full list<br/>
+				$list.meta.globalcount; - count of elements in full list<br/>
+				$list.meta.index; - index of this element in sub list<br/>
+				$list.meta.count; - count of elements in sub list<br/>
+				$list.meta.isfirst; - is this the first element in the sub list?<br/>
+				$list.meta.islast; - is this the last element in the sub list?<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>pos-move</td>
+			<td>-</td>
+			<td>
+				Move child nodes to the specified element.
+				If attribute "unique" is true (default false), then dups are tracked by ID.
+				If attribute "update" is true (default true), and uniques is true, then dup attributes are updated.
+			</td>
+			<td>(view) / (selector)</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pos-numberformat</td>
+			<td>-</td>
+			<td>Format a number to have the specified digits, decimal places, zero-padding, etc.</td>
+			<td>
+				number - number to format<br/>
+				type - type of formatting - fixed, precision, frontpad, floor, ceil, or round<br/>
+			</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pos-prefixedproperty</td>
+			<td>-</td>
+			<td>Map an unprefixed CSS property name to a browser-specific property name.</td>
+			<td>property - name to map</td>
+			<td>$prefixedproperty;</td>
+		</tr>
+		<tr>
+			<td>pos-replace</td>
+			<td>-</td>
+			<td>Replace a string with another, inside yet another string.</td>
+			<td>
+				string - the string to process<br/>
+				replace - the string to replace<br/>
+				with - the string to replace with<br/>
+				(regexp) - whether the "replace" value is regular expression<br/>
+				(all) - whether to replace all occurrences (non-regexp only)<br/>
+			</td>
+			<td>$replace;</td>
+		</tr>
+		<tr>
+			<td>pos-selectoption</td>
+			<td>-</td>
+			<td>Select the child option with the matching value.</td>
+			<td>value - the value to match on child option elements</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pos-set</td>
+			<td>-</td>
+			<td>Set a value in context, optionally in parent contexts.</td>
+			<td>
+				value - the value to set<br/>
+				valuekey - the key in context to the value to set<br/>
+				context - the context in which to set - view, page, or application.<br/>
+				expression - set the value to the result of evaluating the expression.
+				operators are evaluated left to right and are - +, -, /, *, and %.<br/>
+			</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pos-join</td>
+			<td>-</td>
+			<td>Split a string into an array of elements, with a configurable delimiter.</td>
+			<td>
+				string - string to split<br/>
+				(delimiter) - delimiter, default is space<br/>
+				(regexp) - whether the delimiter is a regular expression<br/>
+			</td>
+			<td>$split; - resulting list of elements</td>
+		</tr>
+		<tr>
+			<td>pos-sqlquery</td>
+			<td>-</td>
+			<td>Query into a database using the Web SQL API.</td>
+			<td>
+				database - database name<br/>
+				(version) - version of database required (upgrades not supported)<br/>
+				(size) - database size to request<br/>
+				query - SQL query, including ?s for parameters<br/>
+				(parameters) - parameters, comma delimited<br/>
+			</td>
+			<td>$sqlquery; - list of records</td>
+		</tr>
+		<tr>
+			<td>pos-timeago</td>
+			<td>-</td>
+			<td>
+				Calculate the time delta between the current date/time and the date/time passed in attributes.
+				Units added to context are the largest non-zero units.
+			</td>
+			<td>(s) / (ms)</td>
+			<td>
+				$timeago.units;<br/>
+				$timeago.value;<br/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

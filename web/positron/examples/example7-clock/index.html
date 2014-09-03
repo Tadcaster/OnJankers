@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Positron Genesis: Clock</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<style>
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.clock
+{
+	width: 100vw;
+	height: 100vw;
+	background-image: url('images/clock-face.jpg');
+	background-size: 100vw 100vw;
+}
+
+#month-day
+{
+	display: block;
+	position: absolute;
+	left: 27vw;
+	top: 47vw;
+	width: 15vw;
+	height: 5vw;
+	line-height: 5vw;
+	font-size: 3vw;
+	font-family: sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid black;
+}
+
+#year
+{
+	display: block;
+	position: absolute;
+	left: 60vw;
+	top: 47vw;
+	width: 15vw;
+	height: 5vw;
+	line-height: 5vw;
+	font-size: 3vw;
+	font-family: sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid black;
+}
+
+#hour-hand
+{
+	display: block;
+	position: absolute;
+	left: 49.5vw;
+	top: 32vw;
+	height: 20vw;
+	transform-origin: center 90%;
+}
+
+#minute-hand
+{
+	display: block;
+	position: absolute;
+	left: 49.5vw;
+	top: 24vw;
+	height: 30vw;
+	transform-origin: center 90%;
+}
+
+#second-hand
+{
+	display: block;
+	position: absolute;
+	left: 49.5vw;
+	top: 24vw;
+	height: 30vw;
+	transform-origin: center 90%;
+}
+
+</style>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div pos-view="clockinterval:">
+		<div pos-action="(interval: 100ms) runview: clockcontroller"></div>
+	</div>
+	
+	<div pos-view="clockcontroller:" class="pos-invisible">
+		<pos-date>
+			<pos-move view="clock" unique="true" update="true">
+				<div id="month-day">
+					<pos-split string="$date.string;">
+						<!-- getting the month from the string ensures it's 3 characters! hack -->
+						<pos-list key="split" offset="1" limit="1" name="month">
+							$month;
+						</pos-list>
+						<pos-list key="split" offset="2" limit="1" name="day">
+							$day;
+						</pos-list>
+					</pos-split>
+				</div>
+				<div id="year">
+					$date.year;
+				</div>
+				<clock-angles key="date">
+					<pos-prefixedproperty property="transform">
+						<img id="hour-hand" src="images/hour-hand.png" style="$prefixedproperty;: rotate($angles.hoursdegree;deg)"></img>
+						<img id="minute-hand" src="images/minute-hand.png" style="$prefixedproperty;: rotate($angles.minutesdegree;deg)"></img>
+						<img id="second-hand" src="images/second-hand.png" style="$prefixedproperty;: rotate($angles.secondsdegree;deg)"></img>
+					</pos-prefixedproperty>
+				</clock-angles>
+			</pos-move>
+		</pos-date>
+	</div>
+	
+	<!-- the elements in this view get updated via the move tag above -->
+	<div pos-view="clock:" class="clock">
+		<div id="month-day"></div>
+		<div id="year"></div>
+		<img id="hour-hand" src="images/hour-hand.png"></img>
+		<img id="minute-hand" src="images/minute-hand.png"></img>
+		<img id="second-hand" src="images/second-hand.png"></img>
+	</div>
+	
+</body>
+
+</html>

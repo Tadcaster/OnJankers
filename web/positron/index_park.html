@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<title>Parking experiment</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+
+</head>
+
+<body
+	nu-app="Parking Data"
+  xnu-start-page="show"
+  xnu-start-page-delay="100"
+	xnu-progress-view="circlespinner"
+	>
+	
+<div class="header">	
+		<h1>Parking Data Test</h1> 	
+</div>
+    
+                    <pos-json url="parking-short.json">
+                        <pos-list key="json.ParkingDestinations" name="destination">
+                            
+                            <div class="list-item">$destination.DestinationID;</div>
+                            <div class="list-item">$destination.DestinationName;</div>
+                            <div class="list-item">$destination.Latitude;</div>
+                            <div class="list-item">$destination.Longitude;</div>
+                            <div class="list-item">$destination.TimeZone;</div>
+                            <div class="list-item">$destination.PaymentMethodsAccepted;</div>
+							
+                            
+                        </pos-list>
+                    </pos-json>
+
+	<!-- container page markup -->
+	<div id="nu-page-container"></div>
+	
+	<!-- loader view, if you want it -->
+	<div nu-view="circlespinner:hc" id="spinner-block" class="circle-spinner nu-invisible"></div>
+
+    
+</div>
+</body>
+
+</html>

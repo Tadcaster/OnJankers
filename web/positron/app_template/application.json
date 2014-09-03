@@ -1,0 +1,17 @@
+
+
+{
+	"actions" :
+	{
+		"sample" : "SampleAction"
+	},
+	"tags" :
+	{
+		"sample" : "SampleTag"
+	},
+	"triggers" :
+	{
+		"sample" : "SampleTrigger"
+	}
+}
+
