@@ -1,0 +1,43 @@
+<title>Positron Example 4: Dynamics</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<pos-json url="parking-short.json">
+    <pos-list key="json.ParkingDestinations" name="destination">
+        <h3>$destination.DestinationName;</h3>
+        <div>Payment Methods:
+            <pos-if empty="$destination.PaymentMethodsAccepted.length;">
+                no information available
+            </pos-if>
+            <pos-if notempty="$destination.PaymentMethodsAccepted.length;">
+                <pos-list key="destination.PaymentMethodsAccepted" name="method">
+                    <pos-if true="$method.meta.isfirst; == false">,</pos-if>
+                    $method.PaymentMethod;
+                </pos-list>
+            </pos-if>
+        </div>
+        <pos-if empty="$destination.RateDescription;">
+            <div>Rates: $destination.RateLowest;$destination.CurrencySymbol; - $destination.RateHighest;$destination.CurrencySymbol;</div>
+        </pos-if>
+        <pos-if notempty="$destination.RateDescription;">
+            <div>$destination.RateDescription;</div>
+        </pos-if>
+        <div><pos-img src="http://maps.googleapis.com/maps/api/staticmap?center=$destination.Latitude;,$destination.Longitude;&zoom=14&size=400x300&sensor=false&markers=color:red|label:Parking Spot|$destination.Latitude;,$destination.Longitude;"></pos-img></div>
+    </pos-list>
+</pos-json>
+
+</body>
+
+</html>

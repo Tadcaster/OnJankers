@@ -31,9 +31,13 @@
                             
                             <pos-list key="json.ParkingDestinations" name="destination">
                             
+                        <pos-json url="http://api.openweathermap.org/data/2.5/find?$destination.lat.$destinationlon=37.5&cnt=10">
+
+                            <pos-list key="json.list" name="weather">
 
                                 <div class="list-item">ID: $destination.DestinationID;</div>
                                 <div class="list-item">Address: $destination.DestinationName;</div>
+                                <div class="list-item">name: $weather.name;</div>
                                 <div class="list-item">Lat: $destination.Latitude;</div>
                                 <div class="list-item">Long: $destination.Longitude;</div>
                                 <div class="list-item">TimeZone: $destination.TimeZone;</div>
@@ -45,7 +49,7 @@
 
                             </pos-list>
                             </pos-list>
-                           
+                            </pos-list>
                                                     
                         </pos-json>
                         </pos-json>
