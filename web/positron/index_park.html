@@ -15,40 +15,34 @@
 
 </head>
 
-<body
-	nu-app="Parking Data"
-  xnu-start-page="show"
-  xnu-start-page-delay="100"
-	xnu-progress-view="circlespinner"
-	>
+<body>
 	
 <div class="header">	
 		<h1>Parking Data Test Prax</h1> 	
 </div>
                 
     
-                        <pos-json url="parking-short.json">
+    <pos-json url="parking-short.json">
                             
-                            <pos-list key="json.ParkingDestinations" name="destination">
+        <pos-list key="json.ParkingDestinations" name="destination">
                             
-
-                                <div class="list-item">ID: $destination.DestinationID;</div>
-                                <div class="list-item">Address: $destination.DestinationName;</div>
-                                <div class="list-item">Lat: $destination.Latitude;</div>
-                                <div class="list-item">Long: $destination.Longitude;</div>
-                                <div class="list-item">TimeZone: $destination.TimeZone;</div>
-                                <div class="list-item">PaymentMethodsAccepted :</div>
+            <div class="list-item">--------------------------</div>
+            <div class="list-item">ID: $destination.DestinationID;</div>
+            <div class="list-item">Address: $destination.DestinationName;</div>
+            <div class="list-item">Lat: $destination.Latitude;</div>
+            <div class="list-item">Long: $destination.Longitude;</div>
+            <div class="list-item">TimeZone: $destination.TimeZone;</div>
+            <div class="list-item">PaymentMethodsAccepted :</div>
      
-                            <pos-list key="destination.PaymentMethodsAccepted" name="method">
-                            
-                                <div class="list-item">$method.PaymentMethod;</div>
+                <pos-list key="destination.PaymentMethodsAccepted" name="method">
 
-                            </pos-list>
-                            </pos-list>
-                           
+                    <div class="list-item"><ul>$method.PaymentMethod;</ul></div>
+                                        
+                </pos-list>
+                                
+        </pos-list> 
                                                     
-                        </pos-json>
-                        </pos-json>
+    </pos-json>
                            
 </div>
 </body>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<title>Weather experiment</title>
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	
+<div class="header">	
+		<h1>Weather Data Test</h1> 	
+</div>
+                
+    
+    <pos-json url="http://api.openweathermap.org/data/2.5/weather?lat=35&lon=-79.940035">
+                            
+        <pos-list key="json.weather" name="weather">
+                            
+            <div class="list-item">--------------------------</div>
+            <div class="list-item">$weather.main;</div>
+            <div class="list-item">$weather.description;</div>
+            <div class="list-item">$weather.temp;</div>
+            
+                <pos-list key="json.main" name="main">
+                    
+                    <div class="list-item">$main.temp;</div>
+                    
+                </pos-list>    
+                                
+        </pos-list> 
+                                                    
+    </pos-json>
+                           
+</div>
+</body>
+
+</html>

@@ -27,32 +27,46 @@
 </div>
                 
     
-                        <pos-json url="parking-short.json">
+    <pos-json url="parking-short.json">
                             
-                            <pos-list key="json.ParkingDestinations" name="destination">
+        <pos-list key="json.ParkingDestinations" name="destination">
                             
-                        <pos-json url="http://api.openweathermap.org/data/2.5/find?$destination.lat.$destinationlon=37.5&cnt=10">
-
-                            <pos-list key="json.list" name="weather">
-
-                                <div class="list-item">ID: $destination.DestinationID;</div>
-                                <div class="list-item">Address: $destination.DestinationName;</div>
-                                <div class="list-item">name: $weather.name;</div>
-                                <div class="list-item">Lat: $destination.Latitude;</div>
-                                <div class="list-item">Long: $destination.Longitude;</div>
-                                <div class="list-item">TimeZone: $destination.TimeZone;</div>
-                                <div class="list-item">PaymentMethodsAccepted :</div>
+            <hr>
+            <div><h4>Parking Lot:</h4></div>
+            <div class="list-item">ID: $destination.DestinationID;</div>
+            <div class="list-item">Address: $destination.DestinationName;</div>
+            <div class="list-item">Lat: $destination.Latitude;</div>
+            <div class="list-item">Long: $destination.Longitude;</div>
+            <div class="list-item">TimeZone: $destination.TimeZone;</div>
+            <div class="list-item">PaymentMethodsAccepted :</div>
      
-                            <pos-list key="destination.PaymentMethodsAccepted" name="method">
-                            
-                                <div class="list-item">$method.PaymentMethod;</div>
+                <pos-list key="destination.PaymentMethodsAccepted" name="method">
 
-                            </pos-list>
-                            </pos-list>
-                            </pos-list>
+                    <div class="list-item"><ul>$method.PaymentMethod;</ul></div>
+                                        
+                </pos-list>
+            
+                    
+                    <pos-json url="http://api.openweathermap.org/data/2.5/weather?lat=$destination.Latitude;&lon=$destination.Longtitude;">
+                            
+                        <pos-list key="json.weather" name="weather">
+
+                            <div><h4>Weather:</h4></div>
+                            <div class="list-item">Overview: $weather.main;</div>
+                            <div class="list-item">$weather.description;</div> 
+                            
+                            <pos-set expression="$json.main.temp; - 273.15* 1.8000 +32" name="fahrenheit">
+                            
+                                <pos-numberformat number="$fahrenheit;" type="round" name="format">Current temp : $format;</pos-numberformat>
+                                
+                            </pos-set>
+                        </pos-list> 
                                                     
-                        </pos-json>
-                        </pos-json>
+                    </pos-json>
+                                
+        </pos-list> 
+                                                    
+    </pos-json>
                            
 </div>
 </body>
