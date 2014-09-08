@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<title>Parking experiment</title>
+
+<!-- styles -->
+
+<!-- <link href="positron/positron.css" type="text/css" rel="stylesheet"></link> -->
+
+<!-- scripts -->
+
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+<script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+    
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<link href="css/bootstrap.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+	
+        <div class="navbar navbar-inverse">	
+            <a class="navbar-brand" href="#">Praxing Data</a> 	
+        </div>
+
+            <pos-json url="parking-short.json">
+
+                <pos-list key="json.ParkingDestinations" name="destination">
+
+                    <div class="well"> 
+                        <div><h4>Parking Lot:</h4></div>
+                        
+                        <div class="">ID: $destination.DestinationID;</div>
+                        
+                        <div class="">Address: $destination.DestinationName;</div>
+                        
+                        <div class="list-item">Lat: $destination.Latitude;</div>
+                        
+                        <div class="list-item">Long: $destination.Longitude;</div>
+                        
+                        <div class="list-item">TimeZone: $destination.TimeZone;</div>
+                        
+                        <div class="list-item">PaymentMethodsAccepted :</div>
+
+                            <pos-list key="destination.PaymentMethodsAccepted" name="method">
+
+                                <div class="list-item"><ul>$method.PaymentMethod;</ul></div>
+
+                            </pos-list>
+
+                                <pos-json url="http://api.openweathermap.org/data/2.5/weather?lat=$destination.Latitude;&lon=$destination.Longtitude;">
+
+                                    <pos-list key="json.weather" name="weather">
+
+                                        <div><h4>Weather:</h4></div>
+                                        <div class="list-item">Overview: $weather.main;</div>
+                                        <div class="list-item">$weather.description;</div> 
+
+                                        <pos-set expression="$json.main.temp; - 273.15* 1.8000 +32" name="fahrenheit">
+
+                                            <pos-numberformat number="$fahrenheit;" type="round" name="format">Current temp : $format;</pos-numberformat>
+
+                                        </pos-set>
+                                    </pos-list> 
+
+                                </pos-json>
+
+                    </div><!-- END well -->
+
+                </pos-list> 
+
+            </pos-json>
+                           
+    </div><!-- END container-fluid -->
+</body>
+
+</html>
