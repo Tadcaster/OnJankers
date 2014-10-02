@@ -38,7 +38,7 @@
 
                 <pos-list key="json.ParkingDestinations" name="destination">
 
-                    <div class="well"> 
+                    <div class="jumbotron"> 
                         <div><h4>Parking Lot:</h4></div>
                         
              <!--       <div class="">ID: $destination.DestinationID;</div>  -->
@@ -66,10 +66,11 @@
                                         <div><h4>Weather:</h4></div>
                                         <div class="list-item">Overview: $weather.main;</div>
                                         <div class="list-item">$weather.description;</div> 
+                                        <div class="list-tem"><img src="http://openweathermap.org/img/w/$weather.icon;.png"/></div>
 
                                         <pos-set expression="$json.main.temp; - 273.15* 1.8000 +32" name="fahrenheit">
 
-                                            <pos-numberformat number="$fahrenheit;" type="round" name="format">Current temp : $format;</pos-numberformat>
+                                            <pos-numberformat number="$fahrenheit;" type="round" name="format">Current temp : $format;&deg;F</pos-numberformat>
 
                                         </pos-set>
                                     </pos-list> 
