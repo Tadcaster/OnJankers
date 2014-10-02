@@ -23,6 +23,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     
 <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <style>
+        
+        .inline {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    
+    </style>
 
 </head>
 
@@ -51,11 +60,11 @@
                         
                         <div class="list-item">TimeZone: $destination.TimeZone;</div> -->
                         
-                        <div class="list-item">PaymentMethodsAccepted :</div>
+                        <div class="list-item">Payment Methods Accepted :</div>
 
                             <pos-list key="destination.PaymentMethodsAccepted" name="method">
-
-                                <div class="list-item"><ul>$method.PaymentMethod;</ul></div>
+                                
+                                <div class="list-item inline"><ul><img src="images/$method.PaymentMethod;.png"/></ul></div>
 
                             </pos-list>
 
@@ -64,7 +73,6 @@
                                     <pos-list key="json.weather" name="weather">
 
                                         <div><h4>Weather:</h4></div>
-                                        <div class="list-item">Overview: $weather.main;</div>
                                         <div class="list-item">$weather.description;</div> 
                                         <div class="list-tem"><img src="http://openweathermap.org/img/w/$weather.icon;.png"/></div>
 
